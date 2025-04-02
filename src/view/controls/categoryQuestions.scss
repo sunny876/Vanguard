@@ -1,0 +1,254 @@
+@import "../../ui/styleUtils/index.scss";
+@import "../../variables.scss";
+
+.categoryQuestionsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0.5rem auto 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.categoryCard {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-width: 320px;
+  height: 100%;
+  
+  h2 {
+    color: #111827;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1e40af;
+  }
+}
+
+.questionButton {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+  color: #2563eb;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    color: #1e40af;
+    text-decoration: underline;
+  }
+}
+
+.searchContent {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.enterpriseTitle {
+  font-weight: 700;
+  color: $colorText;
+}
+
+.enterpriseSubtitle {
+  color: $colorSubdued;
+}
+
+.tabs {
+  margin-bottom: $sizeS;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: $sizeS $sizeM;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  color: $colorSubdued;
+  border-radius: $sizeXs;
+  
+  &:hover {
+    background-color: $colorLightShade;
+  }
+  
+  &.active {
+    font-weight: 600;
+    color: $colorPrimary;
+    border-bottom: 2px solid $colorPrimary;
+  }
+}
+
+.categoryFlexItem {
+  flex-basis: 32%;
+  min-width: 290px;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.referenceCount {
+  display: inline-block;
+  background-color: rgba($colorPrimary, 0.08);
+  color: $colorPrimary;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: $sizeS;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.referencesPanel {
+  background-color: $colorEmptyShade;
+  border-radius: 8px;
+  padding: $sizeL;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.modernButton {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  padding: 8px 16px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  &.backButton {
+    margin-right: 10px;
+  }
+  
+  &.searchButton {
+    background-color: $colorPrimary;
+    color: #fff;
+    
+    &:hover {
+      background-color: darken($colorPrimary, 5%);
+    }
+  }
+}
+
+.referenceItem {
+  padding: $sizeM;
+  border-radius: 6px;
+  margin-bottom: $sizeS;
+  position: relative;
+  background-color: rgba($colorLightShade, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  &.low-risk {
+    border-left: 4px solid #2ecc71;
+  }
+  
+  &.medium-risk {
+    border-left: 4px solid #f39c12;
+  }
+  
+  &.high-risk {
+    border-left: 4px solid #e74c3c;
+  }
+}
+
+.referenceHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $sizeS;
+  align-items: center;
+}
+
+.referenceId {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: $colorDarkShade;
+}
+
+.referenceMeta {
+  display: flex;
+  align-items: center;
+}
+
+.riskBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 10px;
+  
+  &.low-risk {
+    background-color: rgba(#2ecc71, 0.1);
+    color: #2ecc71;
+  }
+  
+  &.medium-risk {
+    background-color: rgba(#f39c12, 0.1);
+    color: #f39c12;
+  }
+  
+  &.high-risk {
+    background-color: rgba(#e74c3c, 0.1);
+    color: #e74c3c;
+  }
+}
+
+.fcsBadge {
+  display: inline-block;
+  background-color: rgba($colorPrimary, 0.1);
+  color: $colorPrimary;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.referenceTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: $sizeS;
+}
+
+.referenceDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $colorDarkShade;
+}
+
+.noReferences {
+  color: $colorSubdued;
+  font-style: italic;
+}
+
+.lastUpdated {
+  color: $colorSubdued;
+  font-size: 12px;
+}
+
+@media screen and (max-width: $breakpointContentIsCramped) {
+  .categoryFlexItem {
+    margin-bottom: $sizeL;
+  }
+} 
